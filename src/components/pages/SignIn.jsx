@@ -26,7 +26,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="testing-branches flex justify-center items-center min-h-screen bg-gray-100">
       <Card className="w-96 shadow-xl">
         <CardHeader>
           <CardTitle className="text-2xl text-center">Sign In</CardTitle>
