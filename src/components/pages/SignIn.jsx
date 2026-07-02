@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
-import { Link, Navigate, useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import { Link, useNavigate } from "react-router-dom"
+import { useDispatch} from "react-redux"
 import { setToken } from "../store/authSlice"
 import axiosInstance from "../../api/axiosInstance"
 
@@ -13,11 +13,6 @@ const SignIn = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const token = useSelector(state => state.auth.token)
-
-  if (token) {
-    return <Navigate to="/dashboard" />
-  }
 
   async function handleLogin(data) {
     try {

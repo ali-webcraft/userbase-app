@@ -11,6 +11,7 @@ const SignUp = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
+
   async function handleData(data) {
     try {
       const response = await axiosInstance.post(`/auth/v1/signup`, { email: data.email, password: data.password })

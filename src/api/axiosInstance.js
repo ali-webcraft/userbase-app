@@ -1,10 +1,10 @@
 import axios from "axios"
 import { store } from "../components/store/store"
 
-const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRrYW1nZXBqZG5od2RxZWxlc3ZrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MTc1NzQwNSwiZXhwIjoyMDk3MzMzNDA1fQ.YeceDGJcGqczUSmaZHZUtiPdLWu5LCuh-uT7E8iL_po"
+const API_KEY = import.meta.env.VITE_API_KEY
 
 const axiosInstance = axios.create({
- baseURL: "https://tkamgepjdnhwdqelesvk.supabase.co"
+ baseURL: import.meta.env.VITE_BASE_URL
 })
 
 axiosInstance.interceptors.request.use((config) => {
